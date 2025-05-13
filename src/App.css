@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+body {
+  @apply bg-gray-100 text-gray-800 font-sans;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  @apply max-w-4xl mx-auto p-6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  @apply text-2xl font-bold mb-6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.controls {
+  @apply bg-white p-6 rounded-xl shadow mb-8 space-y-4;
 }
 
-.App-link {
-  color: #61dafb;
+.controls label {
+  @apply block text-sm font-semibold text-gray-700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls input,
+.controls textarea {
+  @apply w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+.toggle-mode {
+  @apply flex space-x-2 mt-4;
+}
+
+.toggle-mode button {
+  @apply px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-100;
+}
+
+.toggle-mode .active {
+  @apply bg-blue-600 text-white border-blue-600;
+}
+
+.preview-container {
+  @apply bg-white p-6 rounded-xl shadow;
+}
+
+.serp-result {
+  @apply space-y-2;
+}
+
+.serp-title {
+  @apply text-blue-700 text-lg leading-snug;
+}
+
+.serp-title.truncate {
+  @apply text-red-600 line-through;
+}
+
+.serp-url {
+  @apply text-green-700 text-sm;
+}
+
+.serp-description {
+  @apply text-gray-700 text-sm;
+}
+
+.serp-description.truncate {
+  @apply text-red-500 italic;
+}
+
+.metrics {
+  @apply mt-4 text-xs text-gray-500;
 }
